@@ -217,12 +217,12 @@ function calcular() {
   if (dia >= 16 && dia <= 19) {
     fechaActivacion = new Date(anio, mes, 20);
     mensaje =
-      `La afiliación se dará de alta con activación el ${fechaActivacion.toLocaleDateString()}. ` +
+      `La cobertura se activará el ${fechaActivacion.toLocaleDateString()}. ` +
       `No se cobra monto proporcional. La primera cuota completa se facturará el mes siguiente.`;
   } 
   else if (dia >= 20) {
     mensaje =
-      `La afiliación se activa el ${fechaAlta.toLocaleDateString()}. ` +
+      `La cobertura se activará el ${fechaAlta.toLocaleDateString()}. ` +
       `No se cobra monto proporcional. La primera cuota completa se facturará el mes siguiente.`;
   } 
   else {
@@ -232,11 +232,11 @@ function calcular() {
 
     if (medio === "tarjeta") {
     mensaje =
-      `La afiliación se encuentra activa desde el ${fechaAlta.toLocaleDateString()}. ` +
+      `La cobertura se activa el ${fechaAlta.toLocaleDateString()}. ` +
       `El monto proporcional es de $${proporcional}. Abonará el mes que viene, al vencimiento del resumen de este mes.`;
     } else {
       mensaje =
-        `La afiliación se encuentra activa desde el ${fechaAlta.toLocaleDateString()}. ` +
+        `La cobertura se activa el ${fechaAlta.toLocaleDateString()}. ` +
         `El monto proporcional es de $${proporcional} y se cobrará junto con la cuota del mes siguiente.`;
     }
   }
