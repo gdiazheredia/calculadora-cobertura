@@ -179,13 +179,13 @@ function calcular() {
     proporcional = (cuota * (diasActivos / diasMes)).toFixed(2);
 
     if (medio === "tarjeta") {
-      mensaje =
-        `La afiliación se encuentra activa desde el ${fechaAlta.toLocaleDateString()}. ` +
-        `El monto proporcional es de $${proporcional} . Abonará el mes que viene, al vencimiento del resumen de este mes.`;
+    mensaje =
+  `La afiliación se encuentra activa desde el ${fechaAlta.toLocaleDateString()}. ` +
+  `El monto proporcional es de $${proporcional}. Abonará el mes que viene, al vencimiento del resumen de este mes.`;
     } else {
       mensaje =
         `La afiliación se encuentra activa desde el ${fechaAlta.toLocaleDateString()}. ` +
-        `El monto proporcional es de $${proporcional} y se cobrará junto con la cuota del mes siguiente. Se enviarán los dos montos por débito.`;
+        `El monto proporcional es de $${proporcional} y se cobrará junto con la cuota del mes siguiente.`;
     }
   }
 
@@ -205,4 +205,3 @@ function copiarMensaje() {
 
 </body>
 </html>
-
