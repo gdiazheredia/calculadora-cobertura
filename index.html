@@ -166,12 +166,12 @@ function calcular() {
     fechaActivacion = new Date(anio, mes, 20);
     mensaje =
       `La afiliación se dará de alta con activación el ${fechaActivacion.toLocaleDateString()}. ` +
-      `No se factura monto proporcional. La primera cuota completa se cobrará el mes siguiente.`;
+      `No se cobra monto proporcional. La primera cuota completa se facturará el mes siguiente.`;
   } 
   else if (dia >= 20) {
     mensaje =
       `La afiliación se activa el ${fechaAlta.toLocaleDateString()}. ` +
-      `No se factura monto proporcional. La primera cuota completa se cobrará el mes siguiente.`;
+      `No se cobra monto proporcional. La primera cuota completa se facturará el mes siguiente.`;
   } 
   else {
     const diasMes = new Date(anio, mes + 1, 0).getDate();
