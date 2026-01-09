@@ -104,6 +104,11 @@
       margin: 6px 0 6px 10px; /* arriba | derecha | abajo | izquierda */
     }
 
+    .highlight.no-corresponde {
+      color: #9ca3af; /* gris suave */
+      font-weight: 500;
+    }
+    
     .message {
       margin-top: 14px;
       padding: 14px;
@@ -254,8 +259,15 @@ function calcular() {
   }
 
   document.getElementById("inicio").innerText = fechaActivacion.toLocaleDateString();
-  document.getElementById("proporcional").innerText =
-    proporcional > 0 ? `$${proporcional}` : "No corresponde";
+ const proporcionalEl = document.getElementById("proporcional");
+
+    if (proporcional > 0) {
+      proporcionalEl.innerText = `$${proporcional}`;
+      proporcionalEl.classList.remove("no-corresponde");
+    } else {
+      proporcionalEl.innerText = "No corresponde";
+      proporcionalEl.classList.add("no-corresponde");
+    }
   document.getElementById("mensaje").innerText = mensaje;
 
   document.getElementById("resultado").style.display = "block";
