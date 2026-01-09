@@ -240,7 +240,7 @@ function calcular() {
   else {
     const diasMes = new Date(anio, mes + 1, 0).getDate();
     const diasActivos = diasMes - dia;
-    proporcional = Math.round(cuota * (diasActivos / diasMes)).toFixed(2);
+    proporcional = Math.round(cuota * (diasActivos / diasMes));
 
     if (medio === "tarjeta") {
     mensaje =
