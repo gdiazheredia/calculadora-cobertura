@@ -198,7 +198,7 @@
 
   <div class="result" id="resultado">
     <div>📅 Fecha de activación: <strong id="inicio"></strong></div>
-    <div>💵 Monto a pagar:</span>
+    <div>💵 Monto proporcional:</span>
     <div class="highlight">$<span id="proporcional"></span></span>
     <div class="message" id="mensaje"></div>
 
@@ -254,7 +254,8 @@ function calcular() {
   }
 
   document.getElementById("inicio").innerText = fechaActivacion.toLocaleDateString();
-  document.getElementById("proporcional").innerText = proporcional ? proporcional : "0";
+  document.getElementById("proporcional").innerText =
+    proporcional > 0 ? `$${proporcional}` : "No corresponde";
   document.getElementById("mensaje").innerText = mensaje;
 
   document.getElementById("resultado").style.display = "block";
